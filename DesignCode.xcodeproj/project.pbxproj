@@ -13,6 +13,8 @@
 		EF2D58EC257A662300C55B12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2D58EB257A662300C55B12 /* Preview Assets.xcassets */; };
 		EF2D58F7257A662300C55B12 /* DesignCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D58F6257A662300C55B12 /* DesignCodeTests.swift */; };
 		EF2D5902257A662300C55B12 /* DesignCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D5901257A662300C55B12 /* DesignCodeUITests.swift */; };
+		EF39287525AD8BD3009EBE09 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39287425AD8BD3009EBE09 /* MenuView.swift */; };
+		EF39287A25AD9DA3009EBE09 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39287925AD9DA3009EBE09 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		EF2D58FD257A662300C55B12 /* DesignCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2D5901257A662300C55B12 /* DesignCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeUITests.swift; sourceTree = "<group>"; };
 		EF2D5903257A662300C55B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF39287425AD8BD3009EBE09 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		EF39287925AD9DA3009EBE09 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				EF2D58E4257A662200C55B12 /* DesignCodeApp.swift */,
 				EF2D58E6257A662200C55B12 /* ContentView.swift */,
+				EF39287425AD8BD3009EBE09 /* MenuView.swift */,
+				EF39287925AD9DA3009EBE09 /* Home.swift */,
 				EF2D58E8257A662300C55B12 /* Assets.xcassets */,
 				EF2D58ED257A662300C55B12 /* Info.plist */,
 				EF2D58EA257A662300C55B12 /* Preview Content */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2D58E7257A662200C55B12 /* ContentView.swift in Sources */,
+				EF39287525AD8BD3009EBE09 /* MenuView.swift in Sources */,
+				EF39287A25AD9DA3009EBE09 /* Home.swift in Sources */,
 				EF2D58E5257A662200C55B12 /* DesignCodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

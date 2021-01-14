@@ -15,6 +15,9 @@
 		EF2D5902257A662300C55B12 /* DesignCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D5901257A662300C55B12 /* DesignCodeUITests.swift */; };
 		EF39287525AD8BD3009EBE09 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39287425AD8BD3009EBE09 /* MenuView.swift */; };
 		EF39287A25AD9DA3009EBE09 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39287925AD9DA3009EBE09 /* Home.swift */; };
+		EF44552625AF43F50063A4A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44552525AF43F50063A4A7 /* HomeView.swift */; };
+		EFA9190425B02AEC00478859 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9190325B02AEC00478859 /* UpdateList.swift */; };
+		EFA9190A25B02F7900478859 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9190925B02F7900478859 /* UpdateDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		EF2D5903257A662300C55B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF39287425AD8BD3009EBE09 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		EF39287925AD9DA3009EBE09 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EF44552525AF43F50063A4A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EFA9190325B02AEC00478859 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		EFA9190925B02F7900478859 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				EF2D58E6257A662200C55B12 /* ContentView.swift */,
 				EF39287425AD8BD3009EBE09 /* MenuView.swift */,
 				EF39287925AD9DA3009EBE09 /* Home.swift */,
+				EF44552525AF43F50063A4A7 /* HomeView.swift */,
+				EFA9190325B02AEC00478859 /* UpdateList.swift */,
+				EFA9190925B02F7900478859 /* UpdateDetail.swift */,
 				EF2D58E8257A662300C55B12 /* Assets.xcassets */,
 				EF2D58ED257A662300C55B12 /* Info.plist */,
 				EF2D58EA257A662300C55B12 /* Preview Content */,
@@ -265,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA9190A25B02F7900478859 /* UpdateDetail.swift in Sources */,
 				EF2D58E7257A662200C55B12 /* ContentView.swift in Sources */,
 				EF39287525AD8BD3009EBE09 /* MenuView.swift in Sources */,
+				EFA9190425B02AEC00478859 /* UpdateList.swift in Sources */,
 				EF39287A25AD9DA3009EBE09 /* Home.swift in Sources */,
+				EF44552625AF43F50063A4A7 /* HomeView.swift in Sources */,
 				EF2D58E5257A662200C55B12 /* DesignCodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +439,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
-				DEVELOPMENT_TEAM = 2X34D4D4K6;
+				DEVELOPMENT_TEAM = 93ZH54832U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -449,7 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
-				DEVELOPMENT_TEAM = 2X34D4D4K6;
+				DEVELOPMENT_TEAM = 93ZH54832U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

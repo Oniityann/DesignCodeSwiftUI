@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct UpdateDetail: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  var update: Update = UpdateData[1]
+  
+  var body: some View {
+    List {
+      VStack {
+        Image(update.image)
+          .resizable()
+          .aspectRatio(contentMode: .fit)
+          .frame(maxWidth: .infinity)
+        
+        Text(update.text)
+          .frame(maxWidth: .infinity, alignment: .leading)
+      }
     }
+    .navigationBarTitle(update.title)
+    .listStyle(PlainListStyle())
+  }
 }
 
 struct UpdateDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        UpdateDetail()
-    }
+  static var previews: some View {
+    UpdateDetail()
+  }
 }

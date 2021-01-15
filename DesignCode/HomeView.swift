@@ -25,7 +25,7 @@ struct HomeView: View {
       VStack {
         HStack {
           Text("Watching")
-            .font(.system(size: 28, weight: .bold))
+            .modifier(CustomFontModifier())
           
           Spacer()
           
@@ -40,16 +40,21 @@ struct HomeView: View {
               .frame(width: 36, height: 36)
               .background(Color.white)
               .clipShape(Circle())
-              .shadow(color: Color.black.opacity(0.1), radius: 1.0, x: 0.0, y: 1.0)
-              .shadow(color: Color.black.opacity(0.2), radius: 20.0, x: 0.0, y: 10.0)
+              .modifier(ShadowModifier())
           })
           .sheet(isPresented: $showUpdate) {
-            ContentView()
+            UpdateList()
           }
         }
         .padding(.horizontal)
         .padding(.top, 30)
         .padding(.leading, 14)
+        
+        ScrollView(.horizontal, showsIndicators: false) {
+          WatchRingsView()
+            .padding(.horizontal, 30.0)
+            .padding(.bottom, 30.0)
+        }
         
         ScrollView(.horizontal, showsIndicators: false) {
           HStack(spacing: 20) {
@@ -63,8 +68,8 @@ struct HomeView: View {
               .frame(width: 275, height: 275)
             }
           }
-          .padding(30)
-          .padding(.bottom, 30)
+          .padding(30.0)
+          .padding(.bottom, 30.0)
         }
         
         Spacer()
@@ -126,3 +131,42 @@ let SectionData = [
   Section(title: "Build a SwiftUI App", text: "20 Sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))),
   Section(title: "SwiftUI Advanced", text: "20 Sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card5")), color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))),
 ]
+
+struct WatchRingsView: View {
+  var body: some View {
+    HStack(spacing: 30.0) {
+      HStack(spacing: 12.0) {
+        RingView(color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), width: 44.0, height: 44.0, percent: 68, showAnimation: .constant(true))
+        
+        VStack(alignment: .leading, spacing: 4.0) {
+          Text("6 minutes left")
+            .bold()
+            .modifier(FontModifier(style: .subheadline))
+          
+          Text("watched 10 mins today")
+            .modifier(FontModifier(style: .caption))
+        }
+      }
+      .padding(8.0)
+      .background(Color.white)
+      .cornerRadius(20.0)
+      .modifier(ShadowModifier())
+      
+      HStack(spacing: 12.0) {
+        RingView(color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), width: 32.0, height: 32.0, percent: 54, showAnimation: .constant(true))
+      }
+      .padding(8.0)
+      .background(Color.white)
+      .cornerRadius(20.0)
+      .modifier(ShadowModifier())
+      
+      HStack(spacing: 12.0) {
+        RingView(color1: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), color2: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 32.0, height: 32.0, percent: 54, showAnimation: .constant(true))
+      }
+      .padding(8.0)
+      .background(Color.white)
+      .cornerRadius(20.0)
+      .modifier(ShadowModifier())
+    }
+  }
+}

@@ -10,22 +10,15 @@ import SwiftUI
 struct HomeView: View {
   @Binding var showProfile: Bool
   @State var showUpdate = false
+  @Binding var showContent: Bool
   
   var body: some View {
-    ZStack {
-      VStack {
-        LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8392156863, green: 0.8431372549, blue: 0.8901960784, alpha: 1)), Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))]), startPoint: .top, endPoint: .bottom)
-        .frame(maxWidth: .infinity)
-        .frame(height: 200)
-        
-        Spacer()
-      }
-      .offset(y: -50.0)
-      
+    ScrollView(.vertical, showsIndicators: false) {
       VStack {
         HStack {
           Text("Watching")
-            .modifier(CustomFontModifier())
+            .bold()
+            .modifier(FontModifier(style: .largeTitle))
           
           Spacer()
           
@@ -54,6 +47,9 @@ struct HomeView: View {
           WatchRingsView()
             .padding(.horizontal, 30.0)
             .padding(.bottom, 30.0)
+            .onTapGesture {
+              showContent = true
+            }
         }
         
         ScrollView(.horizontal, showsIndicators: false) {
@@ -71,6 +67,19 @@ struct HomeView: View {
           .padding(30.0)
           .padding(.bottom, 30.0)
         }
+        .offset(y: -30.0)
+        
+        HStack {
+          Text("Courses").font(.title).bold()
+          
+          Spacer()
+        }
+        .padding(.leading, 30)
+        .offset(y: -60.0)
+        
+        
+        SectionView(section: SectionData[2], width: Screen.width - 60.0, height: 275.0)
+          .offset(y: -60.0)
         
         Spacer()
       }
@@ -80,12 +89,14 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
-    HomeView(showProfile: .constant(false))
+    HomeView(showProfile: .constant(false), showContent: .constant(false))
   }
 }
 
 struct SectionView: View {
   var section: Section
+  var width: CGFloat = 275
+  var height: CGFloat = 275
   
   var body: some View {
     VStack {
@@ -110,7 +121,7 @@ struct SectionView: View {
     }
     .padding(.top, 20)
     .padding(.horizontal, 20)
-    .frame(width: 275, height: 275)
+    .frame(width: width, height: height)
     .background(section.color)
     .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
     .shadow(color: section.color.opacity(0.3), radius: 20, x: 0.0, y: 20.0)

@@ -44,6 +44,7 @@
 		EFDFCBA025B13C470013D43E /* WorkSans-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFDFCB8A25B13C470013D43E /* WorkSans-Italic-VariableFont_wght.ttf */; };
 		EFDFCBA125B13C470013D43E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = EFDFCB8B25B13C470013D43E /* OFL.txt */; };
 		EFDFCBA225B13C480013D43E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = EFDFCB8C25B13C470013D43E /* README.txt */; };
+		EFFFC52425B55FF200D089CA /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFFC52325B55FF200D089CA /* CourseList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		EFDFCB8A25B13C470013D43E /* WorkSans-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EFDFCB8B25B13C470013D43E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		EFDFCB8C25B13C470013D43E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		EFFFC52325B55FF200D089CA /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				EF39287425AD8BD3009EBE09 /* MenuView.swift */,
 				EF39287925AD9DA3009EBE09 /* Home.swift */,
 				EF44552525AF43F50063A4A7 /* HomeView.swift */,
+				EFFFC52325B55FF200D089CA /* CourseList.swift */,
 				EFA9190325B02AEC00478859 /* UpdateList.swift */,
 				EFA9190925B02F7900478859 /* UpdateDetail.swift */,
 				EFA9190E25B0369100478859 /* UpdateStore.swift */,
@@ -394,6 +397,7 @@
 				EFDFCB7125B135D20013D43E /* Modifiers.swift in Sources */,
 				EFA9191425B03B2F00478859 /* TabBar.swift in Sources */,
 				EFA9190A25B02F7900478859 /* UpdateDetail.swift in Sources */,
+				EFFFC52425B55FF200D089CA /* CourseList.swift in Sources */,
 				EF2D58E7257A662200C55B12 /* ContentView.swift in Sources */,
 				EF39287525AD8BD3009EBE09 /* MenuView.swift in Sources */,
 				EFA9190425B02AEC00478859 /* UpdateList.swift in Sources */,

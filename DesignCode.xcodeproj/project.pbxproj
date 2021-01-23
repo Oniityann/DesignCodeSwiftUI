@@ -21,6 +21,7 @@
 		EFA9190F25B0369100478859 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9190E25B0369100478859 /* UpdateStore.swift */; };
 		EFA9191425B03B2F00478859 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9191325B03B2F00478859 /* TabBar.swift */; };
 		EFA9195625B0600600478859 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9195525B0600600478859 /* RingView.swift */; };
+		EFCC82EF25BC428A00F4D7ED /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC82EE25BC428A00F4D7ED /* CourseDetail.swift */; };
 		EFDFCB7125B135D20013D43E /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDFCB7025B135D20013D43E /* Modifiers.swift */; };
 		EFDFCB8D25B13C470013D43E /* WorkSans-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFDFCB7625B13C470013D43E /* WorkSans-VariableFont_wght.ttf */; };
 		EFDFCB8E25B13C470013D43E /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFDFCB7825B13C470013D43E /* WorkSans-Regular.ttf */; };
@@ -85,6 +86,7 @@
 		EFA9190E25B0369100478859 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		EFA9191325B03B2F00478859 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		EFA9195525B0600600478859 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		EFCC82EE25BC428A00F4D7ED /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		EFDFCB7025B135D20013D43E /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		EFDFCB7625B13C470013D43E /* WorkSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EFDFCB7825B13C470013D43E /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				EF39287925AD9DA3009EBE09 /* Home.swift */,
 				EF44552525AF43F50063A4A7 /* HomeView.swift */,
 				EFFFC52325B55FF200D089CA /* CourseList.swift */,
+				EFCC82EE25BC428A00F4D7ED /* CourseDetail.swift */,
 				EFA9190325B02AEC00478859 /* UpdateList.swift */,
 				EFA9190925B02F7900478859 /* UpdateDetail.swift */,
 				EFA9190E25B0369100478859 /* UpdateStore.swift */,
@@ -403,6 +406,7 @@
 				EFA9190425B02AEC00478859 /* UpdateList.swift in Sources */,
 				EFA9190F25B0369100478859 /* UpdateStore.swift in Sources */,
 				EF39287A25AD9DA3009EBE09 /* Home.swift in Sources */,
+				EFCC82EF25BC428A00F4D7ED /* CourseDetail.swift in Sources */,
 				EF44552625AF43F50063A4A7 /* HomeView.swift in Sources */,
 				EF2D58E5257A662200C55B12 /* DesignCodeApp.swift in Sources */,
 			);

@@ -11,14 +11,15 @@ struct CourseList: View {
   @State var courses = CourseData
   @State var active = false
   @State var activeIndex = -1
+  @State var activeView = CGSize.zero
   
   var body: some View {
     ZStack {
-      Color.black.opacity(active ? 0.5 : 0)
+      Color.black.opacity(Double(activeView.height) / 500.0)
         .animation(.linear)
         .edgesIgnoringSafeArea(.all)
       
-      ScrollView(showsIndicators: false) {
+      ScrollView {
         VStack(spacing: 30.0) {
           
           Text("Courses")
@@ -35,6 +36,7 @@ struct CourseList: View {
                 show: $courses[index].show,
                 active: $active,
                 activeIndex: $activeIndex,
+                activeView: $activeView,
                 course: courses[index],
                 index: index
               )
@@ -67,6 +69,7 @@ struct CourseView: View {
   @Binding var show: Bool
   @Binding var active: Bool
   @Binding var activeIndex: Int
+  @Binding var activeView: CGSize
   var course: Course
   var index: Int
   
@@ -132,6 +135,24 @@ struct CourseView: View {
       .background(Color(course.color))
       .clipShape(RoundedRectangle(cornerRadius: 30.0, style: .continuous))
       .shadow(color: Color(course.color).opacity(0.3), radius: 20.0, x: 0.0, y: 20.0)
+      .gesture(
+        show ?
+          DragGesture()
+          .onChanged { value in
+            guard value.translation.height < 300.0 else { return }
+            guard value.translation.height > 0.0 else { return }
+            activeView = value.translation
+          }
+          .onEnded { _ in
+            if activeView.height > 50 {
+              show = false
+              active = false
+              activeIndex = -1
+            }
+            activeView = .zero
+          }
+          : nil
+      )
       .onTapGesture {
         show.toggle()
         active.toggle()
@@ -141,9 +162,36 @@ struct CourseView: View {
           activeIndex = -1
         }
       }
+      
+      if show {
+        CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+          .background(Color.white)
+          .animation(nil)
+      }
     }
     .frame(height: show ? Screen.height : 280)
+    .scaleEffect(1 - activeView.height / 1000.0)
+    .rotation3DEffect(Angle(degrees: Double(activeView.height)/10.0), axis: (x: 0.0, y: 10.0, z: 0.0))
+    .hueRotation(Angle(degrees: Double(activeView.height) / 10.0))
     .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+    .gesture(
+      show ?
+        DragGesture()
+        .onChanged { value in
+          guard value.translation.height < 300.0 else { return }
+          guard value.translation.height > 0.0 else { return }
+//          activeView = value.translation
+        }
+        .onEnded { _ in
+          if activeView.height > 80.0 {
+            show = false
+            active = false
+            activeIndex = -1
+          }
+          activeView = .zero
+        }
+        : nil
+    )
     .edgesIgnoringSafeArea(.all)
   }
 }

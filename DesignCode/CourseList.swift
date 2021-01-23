@@ -10,6 +10,7 @@ import SwiftUI
 struct CourseList: View {
   @State var courses = CourseData
   @State var active = false
+  @State var activeIndex = -1
   
   var body: some View {
     ZStack {
@@ -30,8 +31,17 @@ struct CourseList: View {
           
           ForEach(courses.indices, id: \.self) { index in
             GeometryReader { geometry in
-              CourseView(show: $courses[index].show, active: $active, course: courses[index])
-                .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+              CourseView(
+                show: $courses[index].show,
+                active: $active,
+                activeIndex: $activeIndex,
+                course: courses[index],
+                index: index
+              )
+              .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+              .opacity(activeIndex != index && active ? 0 : 1)
+              .scaleEffect(activeIndex != index && active ? 0.5 : 1)
+              .offset(x: activeIndex != index && active ? Screen.width : 0)
             }
             .frame(height: 280)
             .frame(maxWidth: courses[index].show ? .infinity : Screen.width - 60)
@@ -39,7 +49,7 @@ struct CourseList: View {
           }
         }
         .frame(width: Screen.width)
-  //      .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+        .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
       }
       .statusBar(hidden: active ? true : false)
       .animation(.linear)
@@ -56,7 +66,9 @@ struct CourseList_Previews: PreviewProvider {
 struct CourseView: View {
   @Binding var show: Bool
   @Binding var active: Bool
+  @Binding var activeIndex: Int
   var course: Course
+  var index: Int
   
   var body: some View {
     ZStack(alignment: .top) {
@@ -120,10 +132,14 @@ struct CourseView: View {
       .background(Color(course.color))
       .clipShape(RoundedRectangle(cornerRadius: 30.0, style: .continuous))
       .shadow(color: Color(course.color).opacity(0.3), radius: 20.0, x: 0.0, y: 20.0)
-      
       .onTapGesture {
         show.toggle()
         active.toggle()
+        if show {
+          activeIndex = index
+        } else {
+          activeIndex = -1
+        }
       }
     }
     .frame(height: show ? Screen.height : 280)

@@ -16,6 +16,8 @@
 		EF39287525AD8BD3009EBE09 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39287425AD8BD3009EBE09 /* MenuView.swift */; };
 		EF39287A25AD9DA3009EBE09 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39287925AD9DA3009EBE09 /* Home.swift */; };
 		EF44552625AF43F50063A4A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44552525AF43F50063A4A7 /* HomeView.swift */; };
+		EF5019F026120992007C6C0B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5019EF26120992007C6C0B /* Data.swift */; };
+		EF5019F526120CCC007C6C0B /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5019F426120CCC007C6C0B /* PostList.swift */; };
 		EFA9190425B02AEC00478859 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9190325B02AEC00478859 /* UpdateList.swift */; };
 		EFA9190A25B02F7900478859 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9190925B02F7900478859 /* UpdateDetail.swift */; };
 		EFA9190F25B0369100478859 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9190E25B0369100478859 /* UpdateStore.swift */; };
@@ -81,6 +83,8 @@
 		EF39287425AD8BD3009EBE09 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		EF39287925AD9DA3009EBE09 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EF44552525AF43F50063A4A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EF5019EF26120992007C6C0B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EF5019F426120CCC007C6C0B /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		EFA9190325B02AEC00478859 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		EFA9190925B02F7900478859 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		EFA9190E25B0369100478859 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				EFA9190325B02AEC00478859 /* UpdateList.swift */,
 				EFA9190925B02F7900478859 /* UpdateDetail.swift */,
 				EFA9190E25B0369100478859 /* UpdateStore.swift */,
+				EF5019EF26120992007C6C0B /* Data.swift */,
+				EF5019F426120CCC007C6C0B /* PostList.swift */,
 				EFA9191325B03B2F00478859 /* TabBar.swift */,
 				EF2D58E8257A662300C55B12 /* Assets.xcassets */,
 				EFDFCB7525B13C470013D43E /* Work_Sans */,
@@ -397,12 +403,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA9195625B0600600478859 /* RingView.swift in Sources */,
+				EF5019F526120CCC007C6C0B /* PostList.swift in Sources */,
 				EFDFCB7125B135D20013D43E /* Modifiers.swift in Sources */,
 				EFA9191425B03B2F00478859 /* TabBar.swift in Sources */,
 				EFA9190A25B02F7900478859 /* UpdateDetail.swift in Sources */,
 				EFFFC52425B55FF200D089CA /* CourseList.swift in Sources */,
 				EF2D58E7257A662200C55B12 /* ContentView.swift in Sources */,
 				EF39287525AD8BD3009EBE09 /* MenuView.swift in Sources */,
+				EF5019F026120992007C6C0B /* Data.swift in Sources */,
 				EFA9190425B02AEC00478859 /* UpdateList.swift in Sources */,
 				EFA9190F25B0369100478859 /* UpdateStore.swift in Sources */,
 				EF39287A25AD9DA3009EBE09 /* Home.swift in Sources */,

@@ -48,5 +48,6 @@ struct RingView: View {
 struct RingView_Previews: PreviewProvider {
   static var previews: some View {
     RingView(showAnimation: .constant(true))
+      .previewLayout(.sizeThatFits)
   }
 }
